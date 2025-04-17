@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Comprobante</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>TP1 Algoritmos y Estructura de Datos UTN</h1>
+    <h1>Simulador de Comprobante</h1>
+
+    <!-- Formulario -->
+    <form id="formulario">
+      <label>Nombre del beneficiario:</label>
+      <input type="text" id="beneficiario" required>
+
+      <label>Código identificatorio (Ej: 01-ARS-XXX-2025):</label>
+      <input type="text" id="codigo" required>
+
+      <label>Monto (entero):</label>
+      <input type="number" id="monto" required>
+
+      <button type="submit">Generar comprobante</button>
+    </form>
+
+    <!-- Resultado -->
+    <div id="resultado" class="hidden">
+      <p><strong>Beneficiario:</strong> <span id="r_beneficiario"></span></p>
+      <p><strong>Moneda:</strong> <span id="r_moneda"></span></p>
+      <p><strong>Monto base:</strong> <span id="r_monto_base"></span></p>
+      <p><strong>Monto final:</strong> <span id="r_monto_final"></span></p>
+    </div>
+
+    <!-- Descarga con contraseña -->
+    <button onclick="pedirContraseña()">Descargar código y PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
